@@ -3,11 +3,13 @@
 ##' @param mydata a dataframe with two column of group and phe
 ##' @return a ggplot2 object
 ##' @examples
+##' require(ggplot2);require(plyr)
 ##' mydata = mpg[,c("drv","hwy")];colnames(mydata)=c("group","phe")
 ##' plotBarSdSig(mydata)
 ##' @import ggplot2
 ##' @importFrom plyr ddply
 ##' @importFrom ggsignif geom_signif
+##' @importFrom stats sd
 ##' @export
 
 plotBarSdSig <- function(mydata) {

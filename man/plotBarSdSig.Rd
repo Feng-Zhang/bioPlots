@@ -16,6 +16,7 @@ a ggplot2 object
 This function would generate a list including a countData and colData as input data for testing
 }
 \examples{
+require(ggplot2);require(plyr)
 mydata = mpg[,c("drv","hwy")];colnames(mydata)=c("group","phe")
 plotBarSdSig(mydata)
 }

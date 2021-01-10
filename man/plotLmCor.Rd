@@ -16,6 +16,7 @@ a ggplot2 object
 This function would generate a list including a countData and colData as input data for testing
 }
 \examples{
+require(ggplot2)
 mydata = mpg[,8:9];colnames(mydata)=c("x","y")
 plotLmCor(mydata)
 }

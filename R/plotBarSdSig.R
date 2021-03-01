@@ -3,7 +3,7 @@
 ##' @param mydata a dataframe with two column of group and phe
 ##' @return a ggplot2 object
 ##' @examples
-##' require(ggplot2);require(plyr)
+##' library(ggplot2);library(plyr);library(ggpubr)
 ##' mydata = mpg[,c("drv","hwy")];colnames(mydata)=c("group","phe")
 ##' plotBarSdSig(mydata)
 ##' @import ggplot2

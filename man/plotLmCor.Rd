@@ -4,7 +4,7 @@
 \alias{plotLmCor}
 \title{plotLmCor}
 \usage{
-plotLmCor(mydata)
+plotLmCor(data, mapping)
 }
 \arguments{
 \item{mydata}{a dataframe with two column of x and y}
@@ -17,6 +17,5 @@ This function would generate a list including a countData and colData as input d
 }
 \examples{
 require(ggplot2)
-mydata = mpg[,8:9];colnames(mydata)=c("x","y")
-plotLmCor(mydata)
+print(plotLmCor(mpg,aes(cty,hwy)))
 }

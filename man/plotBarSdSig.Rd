@@ -4,7 +4,7 @@
 \alias{plotBarSdSig}
 \title{plotBarSdSig}
 \usage{
-plotBarSdSig(mydata)
+plotBarSdSig(mydata, x, y)
 }
 \arguments{
 \item{mydata}{a dataframe with two column of group and phe}
@@ -16,7 +16,7 @@ a ggplot2 object
 This function would generate a list including a countData and colData as input data for testing
 }
 \examples{
-require(ggplot2);require(plyr)
+library(ggplot2);library(plyr);library(ggpubr)
 mydata = mpg[,c("drv","hwy")];colnames(mydata)=c("group","phe")
 plotBarSdSig(mydata)
 }

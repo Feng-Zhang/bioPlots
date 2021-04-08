@@ -7,7 +7,9 @@
 plotLmCor(data, mapping)
 }
 \arguments{
-\item{mydata}{a dataframe with two column of x and y}
+\item{data}{Default dataset to use for plot.}
+
+\item{mapping}{Default list of aesthetic mappings to use for plot}
 }
 \value{
 a ggplot2 object

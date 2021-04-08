@@ -4,10 +4,12 @@
 \alias{plotBarSdSig}
 \title{plotBarSdSig}
 \usage{
-plotBarSdSig(mydata, x, y)
+plotBarSdSig(data, mapping)
 }
 \arguments{
-\item{mydata}{a dataframe with two column of group and phe}
+\item{data}{Default dataset to use for plot.}
+
+\item{mapping}{Default list of aesthetic mappings to use for plot}
 }
 \value{
 a ggplot2 object

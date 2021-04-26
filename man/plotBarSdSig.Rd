@@ -4,12 +4,20 @@
 \alias{plotBarSdSig}
 \title{plotBarSdSig}
 \usage{
-plotBarSdSig(data, mapping)
+plotBarSdSig(data, x, y, rowOrder = c(), comparisons = NULL, y_position = NULL)
 }
 \arguments{
 \item{data}{Default dataset to use for plot.}
 
-\item{mapping}{Default list of aesthetic mappings to use for plot}
+\item{x}{Default variable from data for aesthetic mappings to use for plot}
+
+\item{y}{Default variable from data for aesthetic mappings to use for plot}
+
+\item{rowOrder}{the order of x-axis}
+
+\item{comparisons}{A list of length-2 vectors. The entries in the vector are either the names of 2 values on the x-axis or the 2 integers that correspond to the index of the columns of interest.}
+
+\item{y_position}{numeric vector with the y positions of the brackets}
 }
 \value{
 a ggplot2 object
@@ -18,7 +26,13 @@ a ggplot2 object
 This function would generate a list including a countData and colData as input data for testing
 }
 \examples{
-library(ggplot2);library(plyr);library(ggpubr)
-mydata = mpg[,c("drv","hwy")];colnames(mydata)=c("group","phe")
-plotBarSdSig(mydata)
+\dontrun{
+library(ggplot2);library(dplyr);library(ggsignif)
+
+compareGroup = list(c("f","4"),c("f","r"),c("4","r"))
+plotBarSdSig(mpg,drv,hwy,comparisons=compareGroup,y_position=TRUE)
+
+plotBarSdSig(mpg,drv,hwy,rowOrder=c("r","4","f"),
+comparisons=compareGroup,y_position=c(48.2,50.8,32.07))
+}
 }
